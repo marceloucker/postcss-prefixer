@@ -1,0 +1,44 @@
+{
+    "name": "postcss-prefixer",
+    "version": "0.1.0",
+    "description": "Postcss plugin to prefix all classes and ids",
+    "files": [
+        "index.js"
+    ],
+    "dependencies": {
+        "postcss": "^5.0.4"
+    },
+    "devDependencies": {
+        "eslint": "^3.3.1",
+        "mocha": "^2.0.0"
+    },
+    "scripts": {
+        "test": "mocha",
+        "lint": "eslint index.js"
+    },
+    "license": "MIT",
+    "repository": {
+        "type": "git",
+        "url": "git://github.com/marceloucker/postcss-prefixer.git"
+    },
+    "keywords": [
+        "css",
+        "postcss",
+        "postcss-plugin"
+    ],
+
+    "eslintConfig": {
+        "env": {
+            "node": true
+        },
+        "rules": {
+            "quotes": ["error", "single"],
+            "curly": "error",
+            "no-empty-function": 1,
+            "global-require": 1,
+            "no-trailing-spaces": 1,
+            "no-mixed-spaces-and-tabs": 1,
+            "eol-last": 1
+        }
+    }
+}
