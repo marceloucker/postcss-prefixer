@@ -5,10 +5,11 @@ PostCSS plugin to prefix all classes and ids
 
 Before using the plugin, make sure to have installed the PostCSS before:
 
-`npm install --save-dev postcss`
+`npm install postcss`
 
-After installing postcss you can install the plugin:  
-`npm install --save-dev postcss-prefixer`
+After installing postcss you can install the plugin:
+
+`npm install postcss-prefixer`
 
 
 ## Usage
