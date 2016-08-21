@@ -1,0 +1,33 @@
+.prefix-Component .should-ignore {
+    background-color: #000;
+}
+.prefix-Component .should-also-ignore {
+    font-size: 16px;
+}
+.prefix-Component .prefix-should-not-ignore {
+    margin: 0;
+}
+.prefix-Nav, .prefix-NavSide {
+    margin: 0;
+}
+.prefix-no-animaton .prefix-Component {
+    display: block;
+}
+#prefix-Component .prefix-should-not-ignore {
+    margin: 0;
+}
+#prefix-Component .prefix-should-not-ignore.should-ignore {
+    margin: 0;
+}
+#Component-ignore .prefix-should-not-ignore {
+    margin: 0;
+}
+#prefix-Component div:not(.should-ignore, .prefix-should-not-ignore) {
+    box-sizing: border-box;
+}
+.container {
+    display: block;
+}
+.row {
+    width: 100%;
+}

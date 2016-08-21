@@ -1,0 +1,36 @@
+.prefix-my-class {
+    color: green;
+}
+.prefix-my-class .prefix-another-class {
+    box-sizing: border-box;
+}
+.prefix-component.prefix-is-active.prefix-sub-component.prefix-is-disabled {
+    box-sizing: border-box;
+}
+.prefix-my-class:hover, .prefix-my-class:active {
+    color: red;
+}
+.prefix-my-class img {
+    display: block;
+}
+.prefix-class > .prefix-another-class {
+    color: white;
+}
+[class*="col-"], [class^="col-"] {
+    display: block;
+}
+#prefix-id .prefix-component.prefix-is-active.prefix-sub-component.prefix-is-disabled {
+    box-sizing: border-box;
+}
+#prefix-id .prefix-my-class .prefix-with-another-class {
+    box-sizing: border-box;
+}
+#prefix-id div:not(.prefix-my-class) {
+    box-sizing: border-box;
+}
+#prefix-id div:not(.prefix-my-class, .prefix-another-class) {
+    box-sizing: border-box;
+}
+#prefix-id .prefix-my-class img {
+    display: block;
+}

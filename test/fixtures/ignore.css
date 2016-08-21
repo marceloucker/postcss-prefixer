@@ -1,0 +1,33 @@
+.Component .should-ignore {
+    background-color: #000;
+}
+.Component .should-also-ignore {
+    font-size: 16px;
+}
+.Component .should-not-ignore {
+    margin: 0;
+}
+.Nav, .NavSide {
+    margin: 0;
+}
+.no-animaton .Component {
+    display: block;
+}
+#Component .should-not-ignore {
+    margin: 0;
+}
+#Component .should-not-ignore.should-ignore {
+    margin: 0;
+}
+#Component-ignore .should-not-ignore {
+    margin: 0;
+}
+#Component div:not(.should-ignore, .should-not-ignore) {
+    box-sizing: border-box;
+}
+.container {
+    display: block;
+}
+.row {
+    width: 100%;
+}

@@ -1,0 +1,36 @@
+.my-class {
+    color: green;
+}
+.my-class .another-class {
+    box-sizing: border-box;
+}
+.component.is-active.sub-component.is-disabled {
+    box-sizing: border-box;
+}
+.my-class:hover, .my-class:active {
+    color: red;
+}
+.my-class img {
+    display: block;
+}
+.class > .another-class {
+    color: white;
+}
+[class*="col-"], [class^="col-"] {
+    display: block;
+}
+#id .component.is-active.sub-component.is-disabled {
+    box-sizing: border-box;
+}
+#id .my-class .with-another-class {
+    box-sizing: border-box;
+}
+#id div:not(.my-class) {
+    box-sizing: border-box;
+}
+#id div:not(.my-class, .another-class) {
+    box-sizing: border-box;
+}
+#id .my-class img {
+    display: block;
+}
