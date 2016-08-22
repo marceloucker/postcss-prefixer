@@ -49,10 +49,10 @@ function matchIgnore(selector, ignore) {
 
     return ignore.some(function(test) {
         if (test.constructor === RegExp) {
-            return test.exec(selector);
+            return test.exec(selector.replace(/[\,\)]/, ''));
         } else if (test.constructor === String) {
             test = new RegExp(test);
-            return test.exec(selector);
+            return test.exec(selector.replace(/[\,\)]/, ''));
         }
     });
 }
