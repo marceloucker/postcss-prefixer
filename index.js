@@ -16,7 +16,7 @@ function prefixer(prefix, opts) {
 
     return function(css) {
         css.walkRules(function(rule) {
-            var selectors = rule.selector.match(regex);
+            var selectors = rule.selector.split(regex);
 
             if (selectors) {
                 selectors = selectors.map(function(selector) {

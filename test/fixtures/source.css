@@ -13,7 +13,7 @@
 .my-class img {
     display: block;
 }
-.class > .another-class {
+.class> .another-class {
     color: white;
 }
 [class*="col-"], [class^="col-"] {
@@ -33,4 +33,10 @@
 }
 #id .my-class img {
     display: block;
+}
+#id .module .module-component {
+    display: none;
+}
+div:not(.row), div:not(.container), div:not(.col-*) {
+    display: none;
 }

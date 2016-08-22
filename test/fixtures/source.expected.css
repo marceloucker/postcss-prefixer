@@ -13,7 +13,7 @@
 .prefix-my-class img {
     display: block;
 }
-.prefix-class > .prefix-another-class {
+.prefix-class> .prefix-another-class {
     color: white;
 }
 [class*="col-"], [class^="col-"] {
@@ -33,4 +33,10 @@
 }
 #prefix-id .prefix-my-class img {
     display: block;
+}
+#prefix-id .prefix-module .prefix-module-component {
+    display: none;
+}
+div:not(.prefix-row), div:not(.prefix-container), div:not(.prefix-col-*) {
+    display: none;
 }
