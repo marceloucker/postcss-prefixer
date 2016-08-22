@@ -14,19 +14,17 @@ module.exports = postcss.plugin('postcss-prefixer', function(prefix, opts) {
     };
 
     function prefixer(selector) {
-        var validTypes = /^class|^id/;
+        var types = /^class|^id/;
 
         selector.nodes.map(function(node) {
             return node.nodes.map(function(n) {
-                if(n.type === 'selector') { return prefixer(n); }
+                if(n.type === 'selector') { prefixer(n); }
 
-                if (validTypes.test(n.type) && !matchIgnore(n)) {
+                if (types.test(n.type) && !isIgnored(n)) {
                     n.name = prefix + n.name;
                 } else if (n.type === 'nested-pseudo-class') {
-                    return prefixer(n);
+                    prefixer(n);
                 }
-
-                return node;
             });
         });
 
@@ -34,7 +32,7 @@ module.exports = postcss.plugin('postcss-prefixer', function(prefix, opts) {
     }
 
 
-    function matchIgnore(node) {
+    function isIgnored(node) {
         if (!opts.ignore || opts.ignore.constructor !== Array) {
             return false;
         }
