@@ -1,6 +1,6 @@
 {
     "name": "postcss-prefixer",
-    "version": "0.1.1",
+    "version": "0.1.2",
     "description": "Postcss plugin to prefix all classes and ids",
     "files": [
         "index.js"
