@@ -1,68 +1,63 @@
 'use strict';
 
-var postcss = require('postcss');
+var postcss = require('postcss'),
+    Tokenizer = require('css-selector-tokenizer');
 
-module.exports = postcss.plugin('postcss-prefixer', prefixer);
-
-/**
- * Prefix all css classes and IDs
- *
- * @param  {String} prefix
- * @param  {Object} options
- */
-function prefixer(prefix, opts) {
+module.exports = postcss.plugin('postcss-prefixer', function(prefix, opts) {
     opts = opts || {};
-    var regex = /(\s*?[#\.][-\w\d\s,\>\~\+\:\&\(\)]+\s*?)/g;
 
     return function(css) {
         css.walkRules(function(rule) {
-            var selectors = rule.selector.split(regex);
+            var selector = Tokenizer.parse(rule.selector);
+            rule.selector = Tokenizer.stringify(prefixer(selector));
+        });
+    };
 
-            if (selectors) {
-                selectors = selectors.map(function(selector) {
-                    if (!isValidSelector(selector) ||
-                        matchIgnore(selector, opts.ignore)
-                    ) {
-                        return selector;
-                    }
+    function prefixer(selector) {
+        var validTypes = /^class|^id/;
 
-                    return selector.substr(0, 1) + prefix + selector.substr(1);
-                });
+        selector.nodes.map(function(node) {
+            return node.nodes.map(function(n) {
+                if(n.type === 'selector') { return prefixer(n); }
 
-                rule.selector = selectors.join('');
+                if (validTypes.test(n.type) && !matchIgnore(n)) {
+                    n.name = prefix + n.name;
+                } else if (n.type === 'nested-pseudo-class') {
+                    return prefixer(n);
+                }
+
+                return node;
+            });
+        });
+
+        return selector;
+    }
+
+
+    function matchIgnore(node) {
+        if (!opts.ignore || opts.ignore.constructor !== Array) {
+            return false;
+        }
+
+        var selector = node.name;
+
+        switch (node.type) {
+            case 'class':
+                selector = '.' + selector;
+                break;
+            case 'id':
+                selector = '#' + selector;
+                break;
+            default:
+                break;
+        }
+
+        return opts.ignore.some(function(test) {
+            if (test.constructor === RegExp) {
+                return test.exec(selector);
+            } else if (test.constructor === String) {
+                return test === selector;
             }
         });
     }
-}
-
-/**
- * Check if given selector matchs ingore list
- *
- * @param  {String} selector [ selector to matched against the ignore]
- * @param  {Array} ignore [ ignore list ]
- * @return {Boolean}
- */
-function matchIgnore(selector, ignore) {
-    if (!ignore || ignore.constructor !== Array) {
-        return false;
-    }
-
-    return ignore.some(function(test) {
-        if (test.constructor === RegExp) {
-            return test.exec(selector.replace(/[\,\)]/, ''));
-        } else if (test.constructor === String) {
-            test = new RegExp(test);
-            return test.exec(selector.replace(/[\,\)]/, ''));
-        }
-    });
-}
-
-/**
- * Check if given selector is a class or ID
- *
- * @param  {String}  selector [ given selector to be valided ]
- * @return {Boolean}
- */
-function isValidSelector(selector) {
-    return selector.indexOf('.') === 0 || selector.indexOf('#') === 0;
-}
+});
