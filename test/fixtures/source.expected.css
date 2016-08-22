@@ -40,3 +40,9 @@
 div:not(.prefix-row), div:not(.prefix-container), div:not(.prefix-col-*) {
     display: none;
 }
+#prefix-id .prefix-component-container {
+    display: block;
+}
+.prefix-component-container {
+    display: block;
+}

@@ -40,3 +40,9 @@
 div:not(.row), div:not(.container), div:not(.col-*) {
     display: none;
 }
+#id .component-container {
+    display: block;
+}
+.component-container {
+    display: block;
+}

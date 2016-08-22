@@ -25,3 +25,12 @@
 #prefix-Component div:not(.should-ignore, .prefix-should-not-ignore) {
     box-sizing: border-box;
 }
+div:not(.row), div:not(.container), div:not(.col-*) {
+    display: none;
+}
+#prefix-id .prefix-component-container {
+    display: block;
+}
+.prefix-component-container {
+    display: block;
+}
