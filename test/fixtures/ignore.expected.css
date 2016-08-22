@@ -25,9 +25,3 @@
 #prefix-Component div:not(.should-ignore, .prefix-should-not-ignore) {
     box-sizing: border-box;
 }
-.container {
-    display: block;
-}
-.row {
-    width: 100%;
-}

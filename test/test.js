@@ -24,9 +24,7 @@ describe('postcss-css-prefixer', function() {
                     /col-[a-z-]+/,
                     /Component-/,
                     '.should-ignore',
-                    '.should-also-ignore',
-                    '.container',
-                    '.row'
+                    '.should-also-ignore'
                 ]
             }))
             .process(fixture('ignore.css')).css;

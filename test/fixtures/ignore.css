@@ -25,9 +25,3 @@
 #Component div:not(.should-ignore, .should-not-ignore) {
     box-sizing: border-box;
 }
-.container {
-    display: block;
-}
-.row {
-    width: 100%;
-}
