@@ -21,8 +21,10 @@ describe('postcss-css-prefixer', function() {
         var result = postcss()
             .use(cssPrefixer('prefix-', {
                 ignore: [
-                    /col-[a-z-]+/,
+                    /col-/,
                     /Component-/,
+                    '.row',
+                    '.container',
                     '.should-ignore',
                     '.should-also-ignore'
                 ]
