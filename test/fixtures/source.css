@@ -19,6 +19,9 @@
 [class*="col-"], [class^="col-"] {
     display: block;
 }
+[class*="icon-"], [class^="icon-"] {
+    display: block;
+}
 #id .component.is-active.sub-component.is-disabled {
     box-sizing: border-box;
 }

@@ -16,7 +16,10 @@
 .prefix-class> .prefix-another-class {
     color: white;
 }
-[class*="col-"], [class^="col-"] {
+[class*="prefix-col-"], [class^="prefix-col-"] {
+    display: block;
+}
+[class*="prefix-icon-"], [class^="prefix-icon-"] {
     display: block;
 }
 #prefix-id .prefix-component.prefix-is-active.prefix-sub-component.prefix-is-disabled {

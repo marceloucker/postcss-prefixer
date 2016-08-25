@@ -34,3 +34,9 @@ div:not(.row), div:not(.container), div:not(.col-*) {
 .prefix-component-container {
     display: block;
 }
+[class*="col-"], [class^="col-"] {
+    display: block;
+}
+[class*="prefix-icon-"], [class^="prefix-icon-"] {
+    display: block;
+}

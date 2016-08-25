@@ -13,17 +13,28 @@ module.exports = postcss.plugin('postcss-prefixer', function(prefix, opts) {
         });
     };
 
+    /**
+     * [prefixer description]
+     * @param  {[type]} selector [description]
+     * @return {[type]}          [description]
+     */
     function prefixer(selector) {
         var types = /^class|^id/;
 
         selector.nodes.map(function(node) {
             return node.nodes.map(function(n) {
                 if(n.type === 'selector') { prefixer(n); }
-
                 if (types.test(n.type) && !isIgnored(n)) {
                     n.name = prefix + n.name;
                 } else if (n.type === 'nested-pseudo-class') {
                     prefixer(n);
+                } else if (n.type === 'attribute') {
+                    var attrObj = parseAttributeSelector(n.content);
+
+                    if(!isIgnored(attrObj)) {
+                        attrObj.name = prefix + attrObj.name;
+                        n.content = attrObj.stringify();
+                    }
                 }
             });
         });
@@ -32,6 +43,38 @@ module.exports = postcss.plugin('postcss-prefixer', function(prefix, opts) {
     }
 
 
+    /**
+     * Parse node of type attribute content string to object
+     * ez: [class*="col-"] to
+     * {type: 'class', name: 'col-', operator: '*='}
+     *
+     * @param  {[type]} content [description]
+     * @return {[type]}         [description]
+     */
+    function parseAttributeSelector(content) {
+        content = content.split(/(^class|id)([*^?=]*)(\D*)/gi)
+        .filter(function(value) {
+            return value.length && value !== '';
+        }).map(function(value) {
+            return value.trim().replace(/"/g, '');
+        });
+
+        return {
+            type: content[0],
+            operator: content[1],
+            name: content[2],
+            stringify: function() {
+                return this.type + this.operator + '"'+ this.name +'"';
+            }
+        };
+    }
+
+    /**
+     * Check if given node is on ignore list
+     *
+     * @param  {Object}  node
+     * @return {Boolean}
+     */
     function isIgnored(node) {
         if (!opts.ignore || opts.ignore.constructor !== Array) {
             return false;
