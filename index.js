@@ -56,7 +56,7 @@ module.exports = postcss.plugin('postcss-prefixer', function(prefix, opts) {
         .filter(function(value) {
             return value.length && value !== '';
         }).map(function(value) {
-            return value.trim().replace(/"/g, '');
+            return value.trim().replace(/"|'/g, '');
         });
 
         return {
