@@ -60,7 +60,7 @@ module.exports = postcss.plugin('postcss-prefixer', function(prefix, opts) {
                 return value.trim().replace(/"|'/g, '');
             });
 
-        if (content.length < 3) {
+        if (!/^class|id/.test(content[0])) {
             return false;
         }
 
