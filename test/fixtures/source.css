@@ -49,3 +49,6 @@ div:not(.row), div:not(.container), div:not(.col-*) {
 .component-container {
     display: block;
 }
+.component-container[data-custom='test'] {
+    display: block;
+}

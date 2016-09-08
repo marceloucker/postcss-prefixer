@@ -23,15 +23,16 @@ module.exports = postcss.plugin('postcss-prefixer', function(prefix, opts) {
 
         selector.nodes.map(function(node) {
             return node.nodes.map(function(n) {
-                if(n.type === 'selector') { prefixer(n); }
+                if (n.type === 'selector') {
+                    prefixer(n);
+                }
                 if (types.test(n.type) && !isIgnored(n)) {
                     n.name = prefix + n.name;
                 } else if (n.type === 'nested-pseudo-class') {
                     prefixer(n);
                 } else if (n.type === 'attribute') {
                     var attrObj = parseAttributeSelector(n.content);
-
-                    if(!isIgnored(attrObj)) {
+                    if (attrObj && !isIgnored(attrObj)) {
                         attrObj.name = prefix + attrObj.name;
                         n.content = attrObj.stringify();
                     }
@@ -53,18 +54,22 @@ module.exports = postcss.plugin('postcss-prefixer', function(prefix, opts) {
      */
     function parseAttributeSelector(content) {
         content = content.split(/(^class|id)([*^?=]*)(\D*)/gi)
-        .filter(function(value) {
-            return value.length && value !== '';
-        }).map(function(value) {
-            return value.trim().replace(/"|'/g, '');
-        });
+            .filter(function(value) {
+                return value.length && value !== '';
+            }).map(function(value) {
+                return value.trim().replace(/"|'/g, '');
+            });
+
+        if (content.length < 3) {
+            return false;
+        }
 
         return {
             type: content[0],
             operator: content[1],
             name: content[2],
             stringify: function() {
-                return this.type + this.operator + '"'+ this.name +'"';
+                return this.type + this.operator + '"' + this.name + '"';
             }
         };
     }

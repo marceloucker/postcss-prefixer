@@ -49,3 +49,6 @@ div:not(.prefix-row), div:not(.prefix-container), div:not(.prefix-col-*) {
 .prefix-component-container {
     display: block;
 }
+.prefix-component-container[data-custom='test'] {
+    display: block;
+}
