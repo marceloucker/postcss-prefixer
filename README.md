@@ -3,7 +3,7 @@ PostCSS plugin to prefix all classes and ids
 
 ## Installation
 
-Before using the plugin, make sure to have installed the ![PostCSS](https://github.com/postcss/postcss) before:
+Before using the plugin, make sure to have installed the [PostCSS](https://github.com/postcss/postcss) before:
 
 `npm install postcss`
 
