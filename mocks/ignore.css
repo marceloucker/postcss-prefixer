@@ -1,3 +1,16 @@
+html, body {
+    font-size: 100%;
+    height: 100%;
+    position: relative;
+}
+* {
+    box-sizing: border-box;
+}
+ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
 .Component .should-ignore {
     background-color: #000;
 }
