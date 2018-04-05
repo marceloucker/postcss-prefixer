@@ -2,29 +2,24 @@
     "name": "postcss-prefixer",
     "version": "2.0.5",
     "description": "Postcss plugin to prefix all classes and ids",
-    "main": "lib/postcss-prefixer.js",
+    "main": "lib/prefixer.js",
     "directories": {
-        "example": "examples",
         "test": "test"
     },
     "dependencies": {
         "css-selector-tokenizer": "^0.7.0",
-        "postcss": "^5.2.17"
+        "postcss": "^6.0.21"
     },
     "devDependencies": {
-        "babel-cli": "^6.24.1",
-        "babel-preset-es2015": "^6.24.1",
         "eslint": "^3.3.1",
-        "eslint-config-standard": "^10.2.1",
-        "eslint-plugin-import": "^2.2.0",
-        "eslint-plugin-promise": "^3.5.0",
-        "eslint-plugin-standard": "^3.0.1",
-        "faucet": "^0.0.1",
-        "tape": "^4.6.3"
+        "eslint-config-airbnb-base": "^12.1.0",
+        "eslint-plugin-import": "^2.10.0",
+        "jest": "^22.4.3"
     },
     "scripts": {
-        "test": "babel-node lib/**.spec.js | faucet",
-        "lint": "eslint index.js"
+        "test": "jest",
+        "test:watch": "jest --watch",
+        "lint": "eslint"
     },
     "keywords": [
         "css",
