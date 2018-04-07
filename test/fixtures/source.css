@@ -1,67 +1,56 @@
 html, body {
-    font-size: 100%;
-    height: 100%;
-    position: relative;
+  padding: 0;
+  margin: 0;
 }
+
 * {
-    box-sizing: border-box;
+  box-sizing: border-box;
 }
-ul {
-    list-style: none;
-    margin: 0;
-    padding: 0;
+
+#page {
+  overflow: hidden;
 }
-.my-class {
-    color: green;
+
+#page .page-header {
+  position: fixed
 }
-.my-class .another-class {
-    box-sizing: border-box;
+
+.btn {
+  display: flex;
 }
-.component.is-active.component--mutator.is-disabled {
-    box-sizing: border-box;
+
+.btn.btn--small {
+  display: flex;
 }
-.my-class:hover, .my-class:active {
-    color: red;
+
+.btn span {
+  display: inline;
 }
-.my-class img {
-    display: block;
+
+.btn:hover, .btn:active, .btn:focus {
+  background-color: #fff;
 }
-.class> .another-class {
-    color: white;
+
+.wrapper > .container {
+  display: flex;
 }
-[class*="col-"], [class^="col-"] {
-    display: block;
+
+[class="icon-"],
+[class*="icon-"],
+[class^="icon-"],
+[class~="icon-"],
+[class|="icon-"],
+[class$="icon-"] {
+  display: inline;
 }
-[class*="icon-"], [class^="icon-"] {
-    display: block;
+
+span:not(.icon),
+button:not(.btn),
+div:not(.container),
+div:not([class^="col-"]) {
+  display: none;
 }
-#id .component.is-active.sub-component.is-disabled {
-    box-sizing: border-box;
-}
-#id .my-class .with-another-class {
-    box-sizing: border-box;
-}
-#id div:not(.my-class) {
-    box-sizing: border-box;
-}
-#id div:not(.my-class, .another-class) {
-    box-sizing: border-box;
-}
-#id .my-class img {
-    display: block;
-}
-#id .module .module-component {
-    display: none;
-}
-div:not(.row), div:not(.container), div:not(.col-*) {
-    display: none;
-}
-#id .component-container {
-    display: block;
-}
-.component-container {
-    display: block;
-}
-.component-container[data-attr='value'] {
-    display: block;
+
+.container[data-attr="some-value"] {
+  display: inline;
 }

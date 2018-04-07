@@ -1,67 +1,56 @@
 html, body {
-    font-size: 100%;
-    height: 100%;
-    position: relative;
+  padding: 0;
+  margin: 0;
 }
+
 * {
-    box-sizing: border-box;
+  box-sizing: border-box;
 }
-ul {
-    list-style: none;
-    margin: 0;
-    padding: 0;
+
+#prefix-page {
+  overflow: hidden;
 }
-.prefix-my-class {
-    color: green;
+
+#prefix-page .prefix-page-header {
+  position: fixed
 }
-.prefix-my-class .prefix-another-class {
-    box-sizing: border-box;
+
+.prefix-btn {
+  display: flex;
 }
-.prefix-component.prefix-is-active.prefix-component--mutator.prefix-is-disabled {
-    box-sizing: border-box;
+
+.prefix-btn.prefix-btn--small {
+  display: flex;
 }
-.prefix-my-class:hover, .prefix-my-class:active {
-    color: red;
+
+.prefix-btn span {
+  display: inline;
 }
-.prefix-my-class img {
-    display: block;
+
+.prefix-btn:hover, .prefix-btn:active, .prefix-btn:focus {
+  background-color: #fff;
 }
-.prefix-class> .prefix-another-class {
-    color: white;
+
+.prefix-wrapper > .prefix-container {
+  display: flex;
 }
-[class*="prefix-col-"], [class^="prefix-col-"] {
-    display: block;
+
+[class="prefix-icon-"],
+[class*="prefix-icon-"],
+[class^="prefix-icon-"],
+[class~="prefix-icon-"],
+[class|="prefix-icon-"],
+[class$="prefix-icon-"] {
+  display: inline;
 }
-[class*="prefix-icon-"], [class^="prefix-icon-"] {
-    display: block;
+
+span:not(.prefix-icon),
+button:not(.prefix-btn),
+div:not(.prefix-container),
+div:not([class^="prefix-col-"]) {
+  display: none;
 }
-#prefix-id .prefix-component.prefix-is-active.prefix-sub-component.prefix-is-disabled {
-    box-sizing: border-box;
-}
-#prefix-id .prefix-my-class .prefix-with-another-class {
-    box-sizing: border-box;
-}
-#prefix-id div:not(.prefix-my-class) {
-    box-sizing: border-box;
-}
-#prefix-id div:not(.prefix-my-class, .prefix-another-class) {
-    box-sizing: border-box;
-}
-#prefix-id .prefix-my-class img {
-    display: block;
-}
-#prefix-id .prefix-module .prefix-module-component {
-    display: none;
-}
-div:not(.prefix-row), div:not(.prefix-container), div:not(.prefix-col-*) {
-    display: none;
-}
-#prefix-id .prefix-component-container {
-    display: block;
-}
-.prefix-component-container {
-    display: block;
-}
-.prefix-component-container[data-attr='value'] {
-    display: block;
+
+.prefix-container[data-attr="some-value"] {
+  display: inline;
 }

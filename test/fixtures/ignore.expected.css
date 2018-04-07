@@ -1,55 +1,60 @@
 html, body {
-    font-size: 100%;
-    height: 100%;
-    position: relative;
+  padding: 0;
+  margin: 0;
 }
+
 * {
-    box-sizing: border-box;
+  box-sizing: border-box;
 }
-ul {
-    list-style: none;
-    margin: 0;
-    padding: 0;
+
+#page {
+  overflow: hidden;
 }
-.prefix-Component .should-ignore {
-    background-color: #000;
+
+#page .prefix-page-header {
+  position: fixed
 }
-.prefix-Component .should-also-ignore {
-    font-size: 16px;
+
+.prefix-btn {
+  display: flex;
 }
-.prefix-Component .prefix-should-not-ignore {
-    margin: 0;
+
+.prefix-btn.prefix-btn--small {
+  display: flex;
 }
-.prefix-Nav, .prefix-NavSide {
-    margin: 0;
+
+.prefix-btn span {
+  display: inline;
 }
-.prefix-no-animaton .prefix-Component {
-    display: block;
+
+.prefix-btn:hover, .prefix-btn:active, .prefix-btn:focus {
+  background-color: #fff;
 }
-#prefix-Component .prefix-should-not-ignore {
-    margin: 0;
+
+.prefix-wrapper > .container {
+  display: flex;
 }
-#prefix-Component .prefix-should-not-ignore.should-ignore {
-    margin: 0;
+
+.component .component--big {
+  width: 100%;
 }
-#Component-ignore .prefix-should-not-ignore {
-    margin: 0;
+
+[class="icon-"],
+[class*="icon-"],
+[class^="icon-"],
+[class~="icon-"],
+[class|="icon-"],
+[class$="icon-"] {
+  display: inline;
 }
-#prefix-Component div:not(.should-ignore, .prefix-should-not-ignore) {
-    box-sizing: border-box;
+
+span:not(.icon),
+button:not(.prefix-btn),
+div:not(.container),
+div:not([class^="col-"]) {
+  display: none;
 }
-div:not(.row), div:not(.container), div:not(.col-*) {
-    display: none;
-}
-#prefix-id .prefix-component-container {
-    display: block;
-}
-.prefix-component-container {
-    display: block;
-}
-[class*="col-"], [class^="col-"] {
-    display: block;
-}
-[class*="prefix-icon-"], [class^="prefix-icon-"] {
-    display: block;
+
+.container[data-attr="some-value"] {
+  display: inline;
 }

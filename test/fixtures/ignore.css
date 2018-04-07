@@ -1,55 +1,60 @@
 html, body {
-    font-size: 100%;
-    height: 100%;
-    position: relative;
+  padding: 0;
+  margin: 0;
 }
+
 * {
-    box-sizing: border-box;
+  box-sizing: border-box;
 }
-ul {
-    list-style: none;
-    margin: 0;
-    padding: 0;
+
+#page {
+  overflow: hidden;
 }
-.Component .should-ignore {
-    background-color: #000;
+
+#page .page-header {
+  position: fixed
 }
-.Component .should-also-ignore {
-    font-size: 16px;
+
+.btn {
+  display: flex;
 }
-.Component .should-not-ignore {
-    margin: 0;
+
+.btn.btn--small {
+  display: flex;
 }
-.Nav, .NavSide {
-    margin: 0;
+
+.btn span {
+  display: inline;
 }
-.no-animaton .Component {
-    display: block;
+
+.btn:hover, .btn:active, .btn:focus {
+  background-color: #fff;
 }
-#Component .should-not-ignore {
-    margin: 0;
+
+.wrapper > .container {
+  display: flex;
 }
-#Component .should-not-ignore.should-ignore {
-    margin: 0;
+
+.component .component--big {
+  width: 100%;
 }
-#Component-ignore .should-not-ignore {
-    margin: 0;
+
+[class="icon-"],
+[class*="icon-"],
+[class^="icon-"],
+[class~="icon-"],
+[class|="icon-"],
+[class$="icon-"] {
+  display: inline;
 }
-#Component div:not(.should-ignore, .should-not-ignore) {
-    box-sizing: border-box;
+
+span:not(.icon),
+button:not(.btn),
+div:not(.container),
+div:not([class^="col-"]) {
+  display: none;
 }
-div:not(.row), div:not(.container), div:not(.col-*) {
-    display: none;
-}
-#id .component-container {
-    display: block;
-}
-.component-container {
-    display: block;
-}
-[class*="col-"], [class^="col-"] {
-    display: block;
-}
-[class*="icon-"], [class^="icon-"] {
-    display: block;
+
+.container[data-attr="some-value"] {
+  display: inline;
 }
