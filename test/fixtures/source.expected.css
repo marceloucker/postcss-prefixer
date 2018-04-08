@@ -1,0 +1,56 @@
+html, body {
+  padding: 0;
+  margin: 0;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+#prefix-page {
+  overflow: hidden;
+}
+
+#prefix-page .prefix-page-header {
+  position: fixed
+}
+
+.prefix-btn {
+  display: flex;
+}
+
+.prefix-btn.prefix-btn--small {
+  display: flex;
+}
+
+.prefix-btn span {
+  display: inline;
+}
+
+.prefix-btn:hover, .prefix-btn:active, .prefix-btn:focus {
+  background-color: #fff;
+}
+
+.prefix-wrapper > .prefix-container {
+  display: flex;
+}
+
+[class="prefix-icon-"],
+[class*="prefix-icon-"],
+[class^="prefix-icon-"],
+[class~="prefix-icon-"],
+[class|="prefix-icon-"],
+[class$="prefix-icon-"] {
+  display: inline;
+}
+
+span:not(.prefix-icon),
+button:not(.prefix-btn),
+div:not(.prefix-container),
+div:not([class^="prefix-col-"]) {
+  display: none;
+}
+
+.prefix-container[data-attr="some-value"] {
+  display: inline;
+}

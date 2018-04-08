@@ -1,0 +1,60 @@
+html, body {
+  padding: 0;
+  margin: 0;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+#page {
+  overflow: hidden;
+}
+
+#page .page-header {
+  position: fixed
+}
+
+.btn {
+  display: flex;
+}
+
+.btn.btn--small {
+  display: flex;
+}
+
+.btn span {
+  display: inline;
+}
+
+.btn:hover, .btn:active, .btn:focus {
+  background-color: #fff;
+}
+
+.wrapper > .container {
+  display: flex;
+}
+
+.component .component--big {
+  width: 100%;
+}
+
+[class="icon-"],
+[class*="icon-"],
+[class^="icon-"],
+[class~="icon-"],
+[class|="icon-"],
+[class$="icon-"] {
+  display: inline;
+}
+
+span:not(.icon),
+button:not(.btn),
+div:not(.container),
+div:not([class^="col-"]) {
+  display: none;
+}
+
+.container[data-attr="some-value"] {
+  display: inline;
+}
