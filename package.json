@@ -3,6 +3,9 @@
     "version": "2.0.5",
     "description": "postcss plugin to prefix all css selector classes and ids",
     "main": "lib/prefixer.js",
+    "engines": {
+      "node": ">=6.0.0"
+    },
     "dependencies": {
         "css-selector-tokenizer": "^0.7.0",
         "postcss": "^6.0.21"
@@ -23,7 +26,8 @@
         "test:watch": "jest --watch",
         "test:coverage": "jest --coverage",
         "lint": "eslint",
-        "precommit": "npm run test"
+        "precommit": "npm run test",
+        "prepublish": "npm run lint && npm run test"
     },
     "keywords": [
         "css",
