@@ -7,18 +7,23 @@
         "css-selector-tokenizer": "^0.7.0",
         "postcss": "^6.0.21"
     },
+    "peerDependencies": {
+        "postcss": ">= 5.0.0"
+    },
     "devDependencies": {
         "eslint": "^4.19.1",
         "eslint-config-airbnb-base": "^12.1.0",
         "eslint-plugin-import": "^2.10.0",
         "eslint-plugin-jest": "^21.15.0",
+        "husky": "^0.14.3",
         "jest": "^22.4.3"
     },
     "scripts": {
         "test": "jest",
         "test:watch": "jest --watch",
         "test:coverage": "jest --coverage",
-        "lint": "eslint"
+        "lint": "eslint",
+        "precommit": "npm run test"
     },
     "keywords": [
         "css",
@@ -27,8 +32,8 @@
         "postcss-prefixer"
     ],
     "directories": {
-      "lib": "./lib",
-      "test": "./test"
+        "lib": "./lib",
+        "test": "./test"
     },
     "license": "MIT",
     "repository": {
