@@ -4,6 +4,7 @@
     "description": "Postcss plugin to prefix all classes and ids",
     "main": "lib/prefixer.js",
     "directories": {
+        "lib": "lib",
         "test": "test"
     },
     "dependencies": {
@@ -11,7 +12,7 @@
         "postcss": "^6.0.21"
     },
     "devDependencies": {
-        "eslint": "^3.3.1",
+        "eslint": "^4.19.1",
         "eslint-config-airbnb-base": "^12.1.0",
         "eslint-plugin-import": "^2.10.0",
         "eslint-plugin-jest": "^21.15.0",
