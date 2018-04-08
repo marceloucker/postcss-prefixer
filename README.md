@@ -1,14 +1,6 @@
-# postcss-prefixer
-
-[![Build Status](https://travis-ci.org/marceloucker/postcss-prefixer.svg?branch=master)](https://travis-ci.org/marceloucker/postcss-prefixer)
-[![dependencies Status](https://david-dm.org/marceloucker/postcss-prefixer/status.svg)](https://david-dm.org/marceloucker/postcss-prefixer)
-[![devDependencies Status](https://david-dm.org/marceloucker/postcss-prefixer/dev-status.svg)](https://david-dm.org/marceloucker/postcss-prefixer?type=dev)
-
-
+# postcss-prefixer [![Build Status](https://travis-ci.org/marceloucker/postcss-prefixer.svg?branch=master)](https://travis-ci.org/marceloucker/postcss-prefixer) [![dependencies Status](https://david-dm.org/marceloucker/postcss-prefixer/status.svg)](https://david-dm.org/marceloucker/postcss-prefixer) [![devDependencies Status](https://david-dm.org/marceloucker/postcss-prefixer/dev-status.svg)](https://david-dm.org/marceloucker/postcss-prefixer?type=dev)
 
 PostCSS plugin to add a prefix to all css selectors classes and ids.
-
-
 
 ## Usage
 #### With [PostCSS cli](https://github.com/postcss/postcss-cli):
@@ -29,7 +21,7 @@ and at your package.json
 
 #### Others
 ```js
-postcss([ require('postcss-prefixer')({ /* options*/ }) ])
+postcss([ require('postcss-prefixer')({ /* options */ }) ])
 ```
 
 ### Options
