@@ -4,7 +4,7 @@
     "description": "postcss plugin to prefix all css selector classes and ids",
     "main": "lib/prefixer.js",
     "engines": {
-      "node": ">=5.0.0"
+      "node": ">=6.0.0"
     },
     "dependencies": {
         "css-selector-tokenizer": "^0.7.0",
