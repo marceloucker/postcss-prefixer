@@ -1,4 +1,6 @@
-# postcss-prefixer [![Build Status](https://travis-ci.org/marceloucker/postcss-prefixer.svg?branch=master)](https://travis-ci.org/marceloucker/postcss-prefixer) [![dependencies Status](https://david-dm.org/marceloucker/postcss-prefixer/status.svg)](https://david-dm.org/marceloucker/postcss-prefixer) [![devDependencies Status](https://david-dm.org/marceloucker/postcss-prefixer/dev-status.svg)](https://david-dm.org/marceloucker/postcss-prefixer?type=dev)
+# postcss-prefixer
+[![Build Status](https://travis-ci.org/marceloucker/postcss-prefixer.svg?branch=master)](https://travis-ci.org/marceloucker/postcss-prefixer) [![dependencies Status](https://david-dm.org/marceloucker/postcss-prefixer/status.svg)](https://david-dm.org/marceloucker/postcss-prefixer) [![devDependencies Status](https://david-dm.org/marceloucker/postcss-prefixer/dev-status.svg)](https://david-dm.org/marceloucker/postcss-prefixer?type=dev)
+[![License: MIT](https://img.shields.io/badge/License-MIT-green.svg)](https://opensource.org/licenses/MIT)
 
 PostCSS plugin to add a prefix to all css selectors classes and ids.
 
