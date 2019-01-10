@@ -54,3 +54,11 @@ div:not([class^="col-"]) {
 .container[data-attr="some-value"] {
   display: inline;
 }
+
+.container[class*=" icon-"] {
+  display: inline;
+}
+
+.hello:not([class*="left labeled"]) {
+  border-radius: 3rem;
+}

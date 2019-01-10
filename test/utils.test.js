@@ -25,12 +25,13 @@ describe('utls.parseAttrSelector()', () => {
     expect(() => utils.parseAttrSelector({ type: 'class' })).toThrow();
   });
 
-  test('should return an object with type, operator and name keys', () => {
+  test('should return an object with type, operator, head and clsses keys', () => {
     const result = utils.parseAttrSelector({ content: 'class^="col-"' });
 
     expect(result).toHaveProperty('type');
     expect(result).toHaveProperty('operator');
-    expect(result).toHaveProperty('name');
+    expect(result).toHaveProperty('head');
+    expect(result).toHaveProperty('classes');
   });
 });
 
