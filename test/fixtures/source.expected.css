@@ -59,6 +59,22 @@ div:not([class^="prefix-col-"]) {
   display: inline;
 }
 
+.prefix-container[class*="prefix-icon- "] {
+  display: inline;
+}
+
+.prefix-container[data-attr='some-value'] {
+  display: inline;
+}
+
+.prefix-container[class*=' prefix-icon-'] {
+  display: inline;
+}
+
+.prefix-container[class*='prefix-icon- '] {
+  display: inline;
+}
+
 .prefix-hello:not([class*="prefix-left prefix-labeled"]) {
   border-radius: 3rem;
 }
