@@ -1,58 +1,58 @@
 {
-    "name": "postcss-prefixer",
-    "version": "2.1.1",
-    "description": "postcss plugin to prefix all css selector classes and ids",
-    "main": "lib/prefixer.js",
-    "engines": {
-        "node": ">=6.0.0"
-    },
-    "dependencies": {
-        "css-selector-tokenizer": "^0.7.1",
-        "postcss": "^7.0.14"
-    },
-    "peerDependencies": {
-        "postcss": ">= 5.0.0"
-    },
-    "devDependencies": {
-        "eslint": "^5.16.0",
-        "eslint-config-airbnb-base": "^13.1.0",
-        "eslint-plugin-import": "^2.16.0",
-        "eslint-plugin-jest": "^22.4.1",
-        "husky": "^1.3.1",
-        "jest": "^24.7.1"
-    },
-    "scripts": {
-        "test": "jest",
-        "test:watch": "jest --watch",
-        "test:coverage": "jest --coverage",
-        "lint": "eslint ./lib",
-        "prepublish": "npm run lint && npm test"
-    },
-    "jest": {
-        "testEnvironment": "node"
-    },
-    "husky": {
-      "hooks": {
-        "pre-commit": "npm test"
-      }
-    },
-    "keywords": [
-        "css",
-        "postcss",
-        "postcss-plugin",
-        "postcss-prefixer"
-    ],
-    "directories": {
-        "lib": "./lib",
-        "test": "./test"
-    },
-    "license": "MIT",
-    "repository": {
-        "type": "git",
-        "url": "git://github.com/marceloucker/postcss-prefixer.git"
-    },
-    "bugs": {
-        "url": "https://github.com/marceloucker/postcss-prefixer/issues"
-    },
-    "homepage": "https://github.com/marceloucker/postcss-prefixer#readme"
+  "name": "postcss-prefixer",
+  "version": "2.1.2",
+  "description": "postcss plugin to prefix all css selector classes and ids",
+  "main": "lib/prefixer.js",
+  "engines": {
+    "node": ">=6.0.0"
+  },
+  "dependencies": {
+    "css-selector-tokenizer": "^0.7.1",
+    "postcss": "^7.0.14"
+  },
+  "peerDependencies": {
+    "postcss": ">= 5.0.0"
+  },
+  "devDependencies": {
+    "eslint": "^5.16.0",
+    "eslint-config-airbnb-base": "^13.1.0",
+    "eslint-plugin-import": "^2.16.0",
+    "eslint-plugin-jest": "^22.4.1",
+    "husky": "^1.3.1",
+    "jest": "^24.7.1"
+  },
+  "scripts": {
+    "test": "jest",
+    "test:watch": "jest --watch",
+    "test:coverage": "jest --coverage",
+    "lint": "eslint ./lib",
+    "prepublish": "npm run lint && npm test"
+  },
+  "jest": {
+    "testEnvironment": "node"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "npm test"
+    }
+  },
+  "keywords": [
+    "css",
+    "postcss",
+    "postcss-plugin",
+    "postcss-prefixer"
+  ],
+  "directories": {
+    "lib": "./lib",
+    "test": "./test"
+  },
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/marceloucker/postcss-prefixer.git"
+  },
+  "bugs": {
+    "url": "https://github.com/marceloucker/postcss-prefixer/issues"
+  },
+  "homepage": "https://github.com/marceloucker/postcss-prefixer#readme"
 }
