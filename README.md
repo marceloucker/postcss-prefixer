@@ -49,7 +49,7 @@ const input = fs.readFileSync('path/to/file.css',  'utf-8');
 
 const output = postcss([
   prefixer({
-        prefix: 'prefix-'
+        prefix: 'prefix-',
         ignore: [ /selector-/, '.ignore', '#ignore' ]
     })
 ]).process(input);
