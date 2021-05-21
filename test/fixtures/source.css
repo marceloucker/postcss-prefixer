@@ -78,3 +78,9 @@ div:not([class^="col-"]) {
 .hello:not([class*="left labeled"]) {
   border-radius: 3rem;
 }
+
+a:not([href]):not([class]),
+a:not([href]):not([class]):hover {
+  color: inherit;
+  text-decoration: none;
+}
