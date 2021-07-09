@@ -1,6 +1,6 @@
 {
   "name": "postcss-prefixer",
-  "version": "2.1.2",
+  "version": "2.1.3",
   "description": "postcss plugin to prefix all css selector classes and ids",
   "main": "lib/prefixer.js",
   "engines": {
