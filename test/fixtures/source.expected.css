@@ -78,3 +78,9 @@ div:not([class^="prefix-col-"]) {
 .prefix-hello:not([class*="prefix-left prefix-labeled"]) {
   border-radius: 3rem;
 }
+
+a:not([href]):not([class]),
+a:not([href]):not([class]):hover {
+  color: inherit;
+  text-decoration: none;
+}

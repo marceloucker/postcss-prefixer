@@ -43,4 +43,11 @@ describe('utils.attrStringify()', () => {
 
     expect(result).toEqual('class^="col-"');
   });
+
+  test('should handle plain class', () => {
+    const attr = utils.parseAttrSelector({ type: 'attribute', content: 'class' });
+    const result = utils.attrStringify(attr);
+
+    expect(result).toEqual('class');
+  });
 });
