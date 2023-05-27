@@ -33,7 +33,7 @@ A [PostCSS] plugin to prefix css selectors.
 
 ## Usage
 
-`npm i -D postcss-prefixer` or `yarn add -D postcss-prefixer`
+`npm i -D postcss postcss-prefixer` or `yarn add -D postcss postcss-prefixer`
 
 create a `postcss.config.js` with:
 ```js

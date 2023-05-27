@@ -30,17 +30,15 @@ describe('Prefixer', () => {
   });
 
   test('should throw when passing invalid prefix type', () => {
-    const results = postcss()
+    expect(() => postcss()
       .use(postcssPrefixer({ prefix: 123, ignore: [] }))
-      .process(mocks.default.source);
-    expect(() => results.css).toThrow();
+      .process(mocks.default.source)).toThrow();
   });
 
   test('should throw when passing invalid ignore type', () => {
-    const results = postcss()
+    expect(() => postcss()
       .use(postcssPrefixer({ prefix: 'prefix-', ignore: '.to-ignore' }))
-      .process(mocks.default.source);
-    expect(() => results.css).toThrow();
+      .process(mocks.default.source)).toThrow();
   });
 
   test('should prefix all selectors', () => {
