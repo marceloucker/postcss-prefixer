@@ -22,9 +22,8 @@
     "postcss": "^8.4.23"
   },
   "scripts": {
-    "test": "jest",
+    "test": "jest --coverage",
     "test:watch": "jest --watch",
-    "test:coverage": "jest --coverage",
     "lint": "eslint ./lib",
     "prepublish": "npm run lint && npm test"
   },
