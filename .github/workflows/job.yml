@@ -2,9 +2,9 @@ name: postcss-prefixer CI
 
 on:
   push:
-    branches: [ main ]
-  pull-request:
-    branches: [ main ]
+    branches: [ master ]
+  pull_request:
+    branches: [ master ]
 
 jobs:
   test:
