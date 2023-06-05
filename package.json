@@ -4,14 +4,13 @@
   "description": "postcss plugin to prefix all css selector classes and ids",
   "main": "lib/prefixer.js",
   "engines": {
-    "node": ">=6.0.0"
+    "node": "^10 || ^12 || >=14"
   },
   "dependencies": {
-    "css-selector-tokenizer": "^0.7.2",
-    "postcss": "^5.2.18"
+    "css-selector-tokenizer": "^0.7.2"
   },
   "peerDependencies": {
-    "postcss": ">= 5.0.0"
+    "postcss": "^8.0.0"
   },
   "devDependencies": {
     "eslint": "^5.16.0",
@@ -19,7 +18,8 @@
     "eslint-plugin-import": "^2.20.2",
     "eslint-plugin-jest": "^23.8.2",
     "husky": "^4.2.3",
-    "jest": "^24.9.0"
+    "jest": "^24.9.0",
+    "postcss": "^8.4.23"
   },
   "scripts": {
     "test": "jest",
