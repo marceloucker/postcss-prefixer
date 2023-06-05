@@ -1,4 +1,4 @@
-name: postcss-prefixer CI
+name: unit testing
 
 on:
   push:
@@ -14,9 +14,10 @@ jobs:
       matrix:
         node-version: [ 14, 16, 18 ]
 
+    name: "Test with NodeJS v${{ matrix.node-version }}"
     steps:
        - uses: actions/checkout@v3
-       - name: Use Node.js ${{ matrix.node-version }}
+       - name: Setup NodeJS v${{ matrix.node-version }}
          uses: actions/setup-node@v3
          with:
             node-version: ${{ matrix.node-version }}

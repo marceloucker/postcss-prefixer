@@ -25,7 +25,7 @@
     "test": "jest --coverage",
     "test:watch": "jest --watch",
     "lint": "eslint ./lib",
-    "prepublish": "npm run lint && npm test"
+    "prepublishOnly": "npm run lint && npm test"
   },
   "jest": {
     "testEnvironment": "node"
