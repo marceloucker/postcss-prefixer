@@ -55,16 +55,18 @@ const input = fs.readFileSync('path/to/file.css',  'utf-8');
 const output = postcss([
   prefixer({
         prefix: 'prefix-',
-        ignore: [ /selector-/, '.ignore', '#ignore' ]
+        ignore: [ /selector-/, '.ignore', '#ignore' ],
+        ignoreFiles: [ /.module.scss/ ]
     })
 ]).process(input);
 ```
 
 #### Options
-| Name           | Description                                |
-|------------------|--------------------------------------------|
-|`prefix` (string) | prefix value to be used                    |
-|`ignore` (array)  | list of selectors to ignore, accepts regex |
+| Name                  | Description                                |
+|-----------------------|--------------------------------------------|
+| `prefix` (string)     | prefix value to be used                    |
+| `ignore` (array)      | list of selectors to ignore, accepts regex |
+| `ignoreFiles` (array) | list of files to ignore, accepts regex     |
 
 
 ## Credits
